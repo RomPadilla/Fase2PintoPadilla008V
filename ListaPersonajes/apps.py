@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class ListapersonajesConfig(AppConfig):
+class ListaPersonajesConfig(AppConfig):
     name = 'ListaPersonajes'
