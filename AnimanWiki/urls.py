@@ -19,8 +19,10 @@ from django.urls import include
 from django.conf.urls.static import static
 from django.conf import settings
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',include('ListaPersonajes.urls')),    
     path('ListaPersonajes/',include('ListaPersonajes.urls'))
     #path(r'^catalogo/, include('catalogo.urls')),
 
