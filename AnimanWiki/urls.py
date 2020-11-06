@@ -22,8 +22,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('ListaPersonajes.urls')),    
-    path('ListaPersonajes/',include('ListaPersonajes.urls'))
+    path('',include('Inicio.urls')),    
+    #path('ListaPersonajes/',include('ListaPersonajes.urls'))
     #path(r'^catalogo/, include('catalogo.urls')),
 
 ]
