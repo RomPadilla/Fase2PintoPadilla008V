@@ -4,11 +4,17 @@ from .models import Personaje
 # Create your views here.
 
 
-def index(request):
+def ListaPersonajes(request):
     num_personaje=Personaje.objects.count()
 
     return render(
         request,
-        'index.html',
+        'ListaPersonajes.html',
         context={'num_personaje':num_personaje},
+    )
+
+def Naruto(request):
+    return render(
+        request,
+        'Naruto.html',
     )

@@ -4,46 +4,6 @@
 	list-style: none;
 }
 
-/*scroll barr boton hacia arriba*/
-::-webkit-scrollbar-button:decrement:vertical{
-	width: 20px;
-	height: 20px;
-	background-image:url(../img/scrollbuton.png);
-}
-
-/*scroll barr boton hacia abajo*/
-::-webkit-scrollbar-button:increment:vertical{
-	width: 20px;
-	height: 20px;
-	background-image:url(../img/scrollbuton2.png);
-}
-
-::-webkit-scrollbar-button:decrement:horizontal{
-	width: 20px;
-	height: 20px;
-	background-image:url(../img/scrollbuton3.png);
-}
-
-/*scroll barr boton hacia abajo*/
-::-webkit-scrollbar-button:increment:horizontal{
-	width: 20px;
-	height: 20px;
-	background-image:url(../img/scrollbuton4.png);
-}
-
-/*scroll barr*/
-::-webkit-scrollbar
-{
-  width: 20px;
-}
-
-/*scroll barr lo que se mueve*/
-
-::-webkit-scrollbar-thumb
-{
-  background: #ffe0c6;
-}
-
 body{
      background: url(../img/fondo.jpg);
      background-size: cover;

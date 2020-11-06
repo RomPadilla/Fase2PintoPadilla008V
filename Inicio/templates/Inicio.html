@@ -18,7 +18,7 @@
  <body onload="fondosRandom();">	
     <header>  	
       <div id="btn"><button id="fbtn" onclick="fondosRandom()">Fondo Random</button></div>
-      <script>$("#fbtn").css({'background':'url(img/fboton.png)'});</script>
+      <script>$("#fbtn").css({'background':'url(static/img/fboton.png)'});</script>
 			<audio id="reproductor" controls>
 			  <source src="{% static 'musica/ops6.mp3' %}" type="audio/mp3"/>
 			</audio>
@@ -27,7 +27,7 @@
   			<ul>
                 <li><a class="menu" href="{% url 'Inicio' %}">Inicio</a></li>
                 <li><a class="menu" href="">Personajes</a></li>
-                <li><a class="menu" href="">Galeria</a></li>
+                <li><a class="menu" href="{% url 'ListaPersonajes' %}">Galeria</a></li>
                 <li><a class="menu" href="">Registro</a></li>
   			</ul>
   		</nav>

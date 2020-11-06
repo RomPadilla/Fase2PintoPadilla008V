@@ -1,4 +1,4 @@
-var bg = ["static/img/fondo1.jpg","static/img/fondo2.jpg","static/img/fondo3.jpg","static/img/fondo4.jpg","static/mg/fondo5.jpg","static/img/fondo6.jpg"]
+var bg = ["static/img/fondo1.jpg","static/img/fondo2.jpg","static/img/fondo3.jpg","static/img/fondo4.jpg","static/img/fondo5.jpg","static/img/fondo6.jpg"]
 
 function fondosRandom() {
 var imgs = bg[Math.floor(Math.random()*bg.length)]

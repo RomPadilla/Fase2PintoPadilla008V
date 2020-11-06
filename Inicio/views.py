@@ -8,3 +8,8 @@ def Inicio(request):
         'Inicio.html',
     )
 
+def Naruto(request):
+    return render(
+        request,
+        'Naruto.html',
+    )
