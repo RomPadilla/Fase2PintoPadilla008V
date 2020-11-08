@@ -1,0 +1,19 @@
+{% block content %}
+
+  		<nav>
+  			<ul>
+                <li><a class="menu" href="{% url 'Inicio' %}">Inicio</a></li>
+                <li><a class="menu" href="{% url 'Naruto' %}">Personajes</a></li>
+                <li><a class="menu" href="{% url 'ListaPersonajes' %}">Galeria</a></li>
+                <li><a class="menu" href="{% url 'Registro' %}">Registro</a></li>
+  			</ul>
+  		</nav>
+<form action="" method="post">
+	{% csrf_token %}
+	<table>
+	{{form.as_table}}
+	</table>
+	<input type="submit" value="Registrar">
+</form>
+	
+{% endblock%}

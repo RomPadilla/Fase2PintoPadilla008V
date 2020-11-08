@@ -1,0 +1,16 @@
+{% block content %}
+
+  		<nav>
+  			<ul>
+                <li><a class="menu" href="{% url 'Inicio' %}">Inicio</a></li>
+                <li><a class="menu" href="{% url 'Naruto' %}">Personajes</a></li>
+                <li><a class="menu" href="{% url 'ListaPersonajes' %}">Galeria</a></li>
+                <li><a class="menu" href="{% url 'Registro' %}">Registro</a></li>
+  			</ul>
+  		</nav>
+<h1> Usuario: {{usuario.Username}}</h1>
+<p>Nombre: {{usuario.Nombre}} {{usuario.Apellido}}</p>
+<p>Fecha de Nacimiento: {{usuario.Fecha}}</p>
+<p>Correo: {{usuario.Correo}}</p>
+<p>Avatar: <img src="{{usuario.Avatar.url}}"></p>
+{% endblock%}

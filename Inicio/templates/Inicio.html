@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	{% block title %}<title >Inicio</title>{% endblock %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+	<script src="{% static 'js/inicio.js' %}"></script>
+</head>
+<body">
+ {% block content %}	
+ <body onload="fondosRandom();">	
+    <header>  	
+      <div id="btn"><button id="fbtn" onclick="fondosRandom()">Fondo Random</button></div>
+      <script>$("#fbtn").css({'background':'url(..static/img/fboton.png)'});</script>
+			<audio id="reproductor" controls>
+			  <source src="{% static 'musica/ops6.mp3' %}" type="audio/mp3"/>
+			</audio>
+      <img class="logo" src="{% static 'img/Name.png' %}" alt="name">
+  		<nav>
+  			<ul>
+                <li><a class="menu" href="{% url 'Inicio' %}">Inicio</a></li>
+                <li><a class="menu" href="{% url 'Naruto' %}">Personajes</a></li>
+                <li><a class="menu" href="{% url 'ListaPersonajes' %}">Galeria</a></li>
+                <li><a class="menu" href="{% url 'Registro' %}">Registro</a></li>
+  			</ul>
+  		</nav>
+    </header>
+       	  <video id="videos"><source src="{% static 'video/NarutovsSasuke.mp4' %}" type="video/mp4"></video>
+             <div id="lugar1">
+             	<button id="play" onclick="PlayStop()">>/II</button>
+             </div>
+               <script>$("#play").css({'background':'Green'});</script>
+             <div id="lugar2">
+             	<button id="mute" onclick="silence()">Mute</button>
+             </div>
+             <script>$("#mute").css({'background':'Green'});</script>
+             <div id="lugar3">
+             	<button id="retro" onclick="adelanretro(-10)"><<</button>
+             </div>
+             <script>$("#retro").css({'background':'Gold'});</script>  
+             <div id="lugar4">
+             	<button id="adel" onclick="adelanretro(10)">>></button>
+             </div>
+             <script>$("#adel").css({'background':'Gold'});</script>
+
+            {% endblock %}
+
+</body>
+</html>
