@@ -14,7 +14,7 @@ class UsuarioUpdate(UpdateView):
 
 class UsuarioDelete(DeleteView):
     model=Usuario
-    success_url=reverse_lazy('Registro')
+    success_url=reverse_lazy('usuario_create')
 
 from django.views import generic
 
