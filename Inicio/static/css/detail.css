@@ -1,0 +1,80 @@
+body{
+	background: orange;
+	background-size: 120%;
+}
+
+.sidebar-nav{
+
+  list-style: none;
+  
+}
+
+@font-face{
+  font-family: 'rock';
+  src: url(../Fuentes/QueenInlineGrunge.ttf);
+}
+
+li{
+  float: left;
+  list-style: none;
+  margin-top: 1vw;
+  margin-right: -4vw;
+
+}
+
+a.ini{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  background: white;
+  margin-left: -1vw;
+}
+
+a.na{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  background: white;
+  margin-left: 3.5vw;
+}
+
+a.lis{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  background: white;
+  margin-left: 5vw;
+} 
+
+a.us{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  background: white;
+  margin-left: 4.2vw;
+}
+
+.col-sm-2 {	
+	margin-left: 38vw;
+}
+
+h1 {
+    margin-top: 10vw;
+    font-size: 2.5vw;
+    color: gold;
+    background: purple;
+    font-family: 'rock';
+}
+
+p {
+    margin-top: 2vw;
+    font-size: 1.5vw;
+    color: gold;
+    background: purple;
+    font-family: Arial;
+}
+

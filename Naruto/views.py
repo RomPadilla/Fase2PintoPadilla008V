@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import Informacione
+from .models import Informaciones
 from django.views import generic
 # Create your views here.
 
 class InformacioneListView(generic.ListView):
-    model = Informacione
+    model = Informaciones
     template_name='Naruto.html'
-    context_object_name='Informacione_list'
+    context_object_name='Informaciones_list'
         

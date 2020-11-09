@@ -17,11 +17,10 @@
                 <li><a class="menu" href="{% url 'Inicio' %}">Inicio</a></li>
                 <li><a class="menu" href="{% url 'Naruto' %}">Personajes</a></li>
                 <li><a class="menu" href="{% url 'ListaPersonajes' %}">Galeria</a></li>
-                <li><a class="menu" href="">Registro</a></li>
+                <li><a class="menu" href="{% url 'usuario_create' %}">Registro</a></li>
               </ul>
             </nav> 
     </header>
-<footer>
     <div class="contenedor">
         <img class="libro" src="{% static 'img/libro.png' %}" alt=""> 
           <FORM>
@@ -276,18 +275,14 @@ Exceptuando a los Zetsus, Naruto ha matado canónicamente sólo a una persona, Y
 En el aniversario número 50 de la Shōnen Jump, Japón voto por los personajes más poderosos de la revista, Naruto Uzumaki se quedó en el puesto 10 del Top 20.
            </TEXTAREA>
         </FORM>
-
-         <div id="tres"><img class="imag" src="{{Informacione.imagen.url}}" alt="">
-         <img class="imag" src="{% static 'img/sakura1.jpg' %}" alt="">
-         <img class="imag" src="{% static 'img/kakashi1.png' %}" alt=""></div>
-         <div id="dos"><img class="imag" src="{% static 'img/jiraiya1.jpg' %}" alt="">
-         <img class="imag" src="{% static 'img/neji1.png' %}" alt=""></div>             
-         <div id="nombre"><a href="" alt="{{Informacione.Nombre}} {{Informacione.Apellido}}"></a></div>
-         <div id="nombre2"><a href="">Sakura Haruno</a></div>
-         <div id="nombre3"><a href="">Kakashi Hatake</a></div>
-         <div id="nombre4"><a href="">Jiraiya</a></div>         
-         <div id="nombre5"><a href="">Neji Hyuga</a></div>
-
+<div>
+        {% for inf in Informarciones_list %}
+         <img class="imag" src="{{inf.imagen.url}}" alt="">           
+         <div id="nombre"><a href="">"{{inf.Nombre}} {{inf.Apellido}}"</a></div>
+        {% endfor %}
+</div>
+    
+<footer>
               <a href="https://www.crunchyroll.com/es/naruto"><img class="icono" src="{% static 'img/iconocrun.png' %}" alt=""></a>
               <a href="https://www.youtube.com/watch?v=ZBTi5DapJ-w"><img class="icono" src="{% static 'img/iconoyoutube.png' %}" alt=""></a>
               <a href="https://es-la.facebook.com/BorutoyNaruto/videos/naruto-capitulo-1/277191479317210/"><img class="icono" src="{% static 'img/iconoface.png' %}" alt=""></a>                                  
