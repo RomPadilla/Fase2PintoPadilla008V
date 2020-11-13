@@ -1,8 +1,14 @@
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
 from django.urls import reverse_lazy
 from .models import Usuario
+from django.views import generic
 
 # Create your views here.
+
+class UsuarioListView(generic.ListView):
+    model = Usuario
+    template_name='Usuarios.html'
+    context_object_name='Usuarios'
 
 class UsuarioCreate(CreateView):
     model=Usuario
@@ -11,7 +17,7 @@ class UsuarioCreate(CreateView):
     
 class UsuarioUpdate(UpdateView):
     model=Usuario
-    fields=['Correo','Numero','Password','Avatar']
+    fields=['Correo','Numero','Password']
 
 class UsuarioDelete(DeleteView):
     model=Usuario

@@ -21,4 +21,4 @@ class Personaje(models.Model):
 
 	def __str__(self):
 		"""String for representing the Model object."""
-		return f'{self.Nombre} {self.Apellido}'	
+		return '%s, %s' % (self.Nombre, self.Apellido)

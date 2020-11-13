@@ -16,5 +16,8 @@ class Usuario(models.Model):
     def get_absolute_url(self):
         return reverse('usuario-detail', args=[str(self.id)])
 
+    class Meta:
+        ordering = ['Apellido', 'Nombre', 'Username']
+
     def __str__(self):
-        return f'{self.Nombre} {self.Apellido} {self.Username}'
+        return  '%s, %s, %s' % (self.Nombre, self.Apellido, self.Username)

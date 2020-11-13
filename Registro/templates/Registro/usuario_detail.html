@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-{% block title %}<title>Login</title>{% endblock %}
+{% block title %}<title>Detalla de usuario</title>{% endblock %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -20,7 +20,8 @@
                 <li><a class="ini" href="{% url 'Inicio' %}">Inicio</a></li>
                 <li><a class="na" href="{% url 'Naruto' %}">Personajes</a></li>
                 <li><a class="lis" href="{% url 'ListaPersonajes' %}">Galeria</a></li>
-                <li><a class="us" href="{% url 'usuario_create' %}">Registro</a></li>
+                <li><a class="cre" href="{% url 'usuario_create' %}">Registro</a></li>
+				<li><a class="us" href="{% url 'usuarios' %}">Usuarios</a></li>
   			</ul>
 {% endblock%}
 
@@ -31,7 +32,6 @@
 <p>Nombre: {{usuario.Nombre}} {{usuario.Apellido}}</p>
 <p>Fecha de Nacimiento: {{usuario.Fecha}}</p>
 <p>Correo: {{usuario.Correo}}</p>
-<p>Avatar: <img src="{{usuario.Avatar.url}}"></p>
 {% endblock%}
 
 </body>
