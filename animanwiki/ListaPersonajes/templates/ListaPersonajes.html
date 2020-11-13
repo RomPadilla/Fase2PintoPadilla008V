@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +10,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="{% static 'css/galeria.css' %}">
 </head>
 <body">
  {% block content %}
@@ -18,17 +19,18 @@
                <div id="titulo"><h1>Galeria de Imagenes/Personajes</h1></div>      
               <ul>
                 <li><a class="menu" href="{% url 'Inicio' %}">Inicio</a></li>
-                <li><a class="menu" href="">Personajes</a></li>
+                <li><a class="menu" href="{% url 'Naruto' %}">Personajes</a></li>
                 <li><a class="menu" href="{% url 'ListaPersonajes' %}">Galeria</a></li>
-                <li><a class="menu" href="">Registro</a></li>
+                <li><a class="menu" href="{% url 'usuario_create' %}">Registro</a></li>
+				<li><a class="uss" href="{% url 'usuarios' %}">Usuarios</a></li>
               </ul>
             </nav> 
     </header>
     {% if Personaje_list %}
-    <div class="container-fluid">
+	  <div class="container-fluid">
       {% for personaje in Personaje_list %}
-      <div id="contenedor1">
-                <div id="carousel1" class="carousel slide" data-ride="carousel">
+      <div id="contenedor{{forloop.counter}}">
+                <div id="carousel{{forloop.counter}}" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img class="img" src="{{personaje.imagen1.url}}" alt="{{personaje.Nombre}} {{personaje.Apellido}} 1">
@@ -40,19 +42,20 @@
                 <img class="img" src="{{personaje.imagen3.url}}" alt="{{personaje.Nombre}} {{personaje.Apellido}} 3">
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carousel{{forloop.counter}}" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carousel{{forloop.counter}}" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
                   <a class="nombre" href="">{{personaje.Nombre}} {{personaje.Apellido}}</a>  
                 </div>
+			</div>
+		</div>
               
       {% endfor %}
-      </div>
 
       {% else %}
       	<p> No hay personajes para mostrar</p>
@@ -62,4 +65,5 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   {% endblock %}  
 </body>
+</html> 
 </html> 
